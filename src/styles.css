@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.bg_login{
+background: linear-gradient(135deg,
+  #2178C4 0%,
+  #499CEB 50%,
+  #6E50BA 100%);
+}
+
