@@ -8,6 +8,7 @@ import { Registro } from './registro/registro';
 
 const routes: Routes = [
   {path: 'login', component: Login, data: {background_class: 'bg_login'}},
+  {path: 'registro', component: Registro, data: {background_class: 'bg_registro'}},
   {path:'',component: Login, data: {background_class: 'bg_login'}}
 ]
 

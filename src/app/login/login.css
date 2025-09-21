@@ -8,3 +8,37 @@
   object-fit: cover;
   display: block;
 }
+
+.img-login1 {
+  width: 85%;
+}
+
+.form-style-content{
+  font-family: 'Jost-Italic';
+  font-size: 1.4rem;
+
+}
+
+
+.form-title{
+    color: #4F21D9;
+}
+
+.form-style h2 {
+  color: #4F21D9;
+  font-family: 'Jost-Italic';
+
+}
+
+.form-style-content button{
+  font-size: 1.3rem;
+
+}
+
+.form-registro{
+  font-size: 1.2rem;
+}
+
+.form-registro a{
+color: #8134D9;
+}

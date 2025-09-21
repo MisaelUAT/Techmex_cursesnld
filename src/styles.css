@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Jost-Italic";
+  src: url(/fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
+}
+
+
 .bg_login{
 background: linear-gradient(135deg,
   #2178C4 0%,
