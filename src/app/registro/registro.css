@@ -8,3 +8,24 @@
   object-fit: cover;
   display: block;
 }
+
+.text-justify{
+  text-align: justify;
+}
+.text-styleRegistro{
+font-family: "Jost-Italic";
+color: #dbeafc;
+}
+
+.text-parrafo{
+  font-family: "Jost";
+}
+
+.img-registro{
+  width: 3%;
+}
+
+.bg-form{
+background-color: #2971f7;
+
+}

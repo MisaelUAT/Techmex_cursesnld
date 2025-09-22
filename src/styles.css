@@ -1,15 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-  font-family: "Jost-Italic";
+  font-family: 'Jost-Italic';
   src: url(/fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
 }
 
-
-.bg_login{
-background: linear-gradient(135deg,
-  #2178C4 0%,
-  #499CEB 50%,
-  #6E50BA 100%);
+@font-face {
+  font-family: 'Jost';
+  src: url(/fonts/Jost/Jost-VariableFont_wght.ttf);
 }
 
+.bg_login {
+  background: linear-gradient(135deg, #2178c4 0%, #499ceb 50%, #6e50ba 100%);
+}
+
+.bg_registro {
+  background: -webkit-linear-gradient(
+    249deg,
+    #a986cc,
+    #0e8bb2,
+    #4e3ad0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    249deg,
+    #a986cc,
+    #0e8bb2,
+    #4e3ad0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
