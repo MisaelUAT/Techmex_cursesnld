@@ -9,36 +9,43 @@
   display: block;
 }
 
+.bg_loginC {
+  background-color: transparent;
+   border-radius: 12px;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* sombra corta y marcada */
+    0 8px 20px rgba(0, 0, 0, 0.15), /* sombra más larga y difusa */
+    0 12px 40px rgba(73, 156, 235, 0.25); /* toque de color para 3D */
+}
+
 .img-login1 {
   width: 85%;
 }
 
-.form-style-content{
+.form-style-content {
   font-family: 'Jost-Italic';
   font-size: 1.4rem;
-
+  color:#f5f5dc;
+  font-weight: bold;
 }
 
-
-.form-title{
-    color: #4F21D9;
+.form-title {
+  color: #f5f5dc;
 }
 
 .form-style h2 {
-  color: #4F21D9;
+  color: #f5f5dc;
   font-family: 'Jost-Italic';
-
 }
 
-.form-style-content button{
+.form-style-content button {
   font-size: 1.3rem;
-
 }
 
-.form-registro{
+.form-registro {
   font-size: 1.2rem;
 }
 
-.form-registro a{
-color: #8134D9;
+.form-registro a {
+  color: #ffb347;
 }

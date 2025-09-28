@@ -22,10 +22,14 @@ color: #dbeafc;
 }
 
 .img-registro{
-  width: 3%;
+  width: 6%;
 }
 
 .bg-form{
-background-color: #2971f7;
-
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* sombra corta y marcada */
+    0 8px 20px rgba(0, 0, 0, 0.15), /* sombra más larga y difusa */
+    0 12px 40px rgba(73, 156, 235, 0.25); /* toque de color para 3D */
 }
