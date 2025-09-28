@@ -1,0 +1,11 @@
+.bg-header{
+    background-color: var(--color-primary);
+}
+
+.text-style{
+    font-family: 'Ubuntu-Medium';
+}
+
+.img-header{
+    width: 8%;
+}

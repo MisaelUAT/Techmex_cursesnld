@@ -14,9 +14,10 @@ import { Footer } from './footer/footer';
 const routes: Routes = [
   {path: 'login', component: Login, data: {background_class: 'bg_login'}},
   {path: 'registro', component: Registro, data: {background_class: 'bg_registro'}},
-  {path:'',component: Login, data: {background_class: 'bg_login'}},
-  {path: 'inicio',component: Inicio},
-  {path: 'introduccion', component: Introduccion,outlet: 'inicio' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {path: 'inicio',component: Inicio,children:[
+     { path: 'introduccion', component: Introduccion, outlet: 'content' }
+  ]}
 ]
 
 @NgModule({

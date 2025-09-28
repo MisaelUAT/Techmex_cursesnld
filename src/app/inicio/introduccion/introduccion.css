@@ -1,0 +1,79 @@
+.d-item{
+    height: 300px;
+}
+
+.d-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.font-chilanka-text{
+
+    font-family: 'Chilanka';
+}
+
+.font-chilanka-text-bold{
+
+    font-family: 'Chilanka';
+    font-style: border;
+}
+
+.background-celeste{
+
+    background-color: #C8A2C8;
+}
+
+.img-configuration-card{
+
+    width:calc(10rem*2);
+    height:calc(5rem*2);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.button-configuration-position{
+
+    margin-left: 7.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Carrusel Infinito*/
+
+ .slider{
+
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slider-animation{
+
+    display: flex;
+    animation: scroll 15s linear infinite;
+    -webkit-animation: scroll 15s linear infinite ;
+    width: calc(200px*10)
+}
+
+
+.slider .slide{
+
+    width: 200px;
+}
+
+@keyframes scroll{
+
+    0%{
+       -webkit-transform: translateX(900px);
+       transform: translateX(900px);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-200px*5));
+        transform: ranslateX(calc(-200px*5));
+
+    }
+
+
+}

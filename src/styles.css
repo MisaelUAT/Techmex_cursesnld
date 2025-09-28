@@ -1,5 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --color-primary: #061e3b;    /* Azul marino oscuro */
+  --color-secondary: #0a2646;  /* Azul petróleo */
+  
+  /* Fondo y superficies */
+  --color-background: #F5F5F5; /* Gris claro/beige */
+  --color-surface: #FFFFFF;    /* Blanco puro */
 
+  /* Texto */
+  --color-text-light: #F5F5DC; /* Beige claro */
+
+  /* Acentos */
+  --color-accent-1: #4A90E2;   /* Azul claro para destacar */
+  --color-accent-2: #FF9800;   /* Naranja para botones CTA */
+  --color-accent-3: #4CAF50;   /* Verde éxito (confirmaciones) */
+
+}
+
+
+@font-face {
+  font-family: 'Ubuntu-Medium' ;
+  src: url(/fonts/others/Ubuntu-Medium.ttf);
+}
 @font-face {
   font-family: 'Jost-Italic';
   src: url(/fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
