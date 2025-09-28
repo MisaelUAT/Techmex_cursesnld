@@ -13,7 +13,7 @@
   text-align: justify;
 }
 .text-styleRegistro{
-font-family: "Jost-Italic";
+font-family: "Jost";
 color: #dbeafc;
 }
 
@@ -32,4 +32,14 @@ color: #dbeafc;
     0 4px 6px rgba(0, 0, 0, 0.2),   /* sombra corta y marcada */
     0 8px 20px rgba(0, 0, 0, 0.15), /* sombra más larga y difusa */
     0 12px 40px rgba(73, 156, 235, 0.25); /* toque de color para 3D */
+}
+
+.steps-wrapper{
+  width: 300%;
+  transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
+.step{
+  flex-shrink: 0;
+  width: 38%;
 }
