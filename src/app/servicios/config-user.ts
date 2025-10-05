@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { map } from 'rxjs';
+import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+// import { map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,20 +9,10 @@ import { map } from 'rxjs';
 export class ConfigUser {
    URL!: any;
   registros: any;
+ constructor(private firestore: Firestore) {}
 
-   constructor(private db: AngularFirestore) { }
-
-  Read_Coleccion(Coleccion: string){
-    return this.db
-      .collection(Coleccion)
-      .snapshotChanges()
-      .pipe(
-        map((response) =>
-          response.map((doc) => ({
-            id: doc.payload.doc.id,
-            ...(doc.payload.doc.data() || {})
-          }))
-        )
-      );
+  Read_Coleccion(coleccion: string): Observable<any[]> {
+    const ref = collection(this.firestore, coleccion);
+    return collectionData(ref, { idField: 'id' });
   }
 }
