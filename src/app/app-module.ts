@@ -17,6 +17,8 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ConfigUsuario } from './inicio/config-usuario/config-usuario';
 import { NavbarOptions } from './inicio/config-usuario/navbar-options/navbar-options';
+import { ConfigInfoPerfil } from './inicio/config-usuario/config-info-perfil/config-info-perfil';
+import { FormsModule } from '@angular/forms';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBZhuH0PDvtAqzEiFZ6enoVLwsoAODl03k',
@@ -40,24 +42,22 @@ const routes: Routes = [
       { path: 'configuracion_usuario', component: ConfigUsuario, outlet: 'content' },
     ],
   },
+  {
+    path: 'configUser',
+    component: ConfigUsuario,
+    children: [
+      { path: 'informacion_perfil', component: ConfigInfoPerfil, outlet: 'content_configuser' },
+    ],
+  },
 ];
 
 @NgModule({
-  declarations: [App, Login, Registro, Inicio, Introduccion, Header, Navbar, Footer, ConfigUsuario, NavbarOptions],
+  declarations: [App, Login, Registro, Inicio, Introduccion, Header, Navbar, Footer, ConfigUsuario, NavbarOptions, ConfigInfoPerfil],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    // AngularFireModule.initializeApp({
-    //   apiKey: 'AIzaSyBZhuH0PDvtAqzEiFZ6enoVLwsoAODl03k',
-    //   authDomain: 'techmex-57.firebaseapp.com',
-    //   projectId: 'techmex-57',
-    //   storageBucket: 'techmex-57.appspot.com',
-    //   messagingSenderId: '703863408934',
-    //   appId: '1:703863408934:web:61c309be8e889fa6c7d9e7',
-    //   measurementId: 'G-HDSY8NVSX0',
-    // }),
-    // AngularFirestoreModule,
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [
