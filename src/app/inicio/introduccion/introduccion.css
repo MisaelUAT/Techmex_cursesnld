@@ -1,3 +1,16 @@
+.bg-image{
+    background-image: url('/inicio/bienvenida/img-empresarial.jpg');
+    height: 45vh;
+    width: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
 .d-item{
     height: 300px;
 }

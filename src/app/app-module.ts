@@ -19,6 +19,8 @@ import { ConfigUsuario } from './inicio/config-usuario/config-usuario';
 import { NavbarOptions } from './inicio/config-usuario/navbar-options/navbar-options';
 import { ConfigInfoPerfil } from './inicio/config-usuario/config-info-perfil/config-info-perfil';
 import { FormsModule } from '@angular/forms';
+import { CentroAyuda } from './inicio/centro-ayuda/centro-ayuda';
+import { PlanesSuscripcion } from './inicio/planes-suscripcion/planes-suscripcion';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBZhuH0PDvtAqzEiFZ6enoVLwsoAODl03k',
@@ -40,6 +42,9 @@ const routes: Routes = [
     children: [
       { path: 'introduccion', component: Introduccion, outlet: 'content' },
       { path: 'configuracion_usuario', component: ConfigUsuario, outlet: 'content' },
+      { path: 'centro-ayuda', component: CentroAyuda, outlet: 'content' },
+      { path: 'planes-suscripcion', component: PlanesSuscripcion, outlet: 'content' },
+
     ],
   },
   {
@@ -52,7 +57,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [App, Login, Registro, Inicio, Introduccion, Header, Navbar, Footer, ConfigUsuario, NavbarOptions, ConfigInfoPerfil],
+  declarations: [App, Login, Registro, Inicio, Introduccion, Header, Navbar, Footer, ConfigUsuario, NavbarOptions, ConfigInfoPerfil, CentroAyuda, PlanesSuscripcion],
   imports: [
     BrowserModule,
     AppRoutingModule,

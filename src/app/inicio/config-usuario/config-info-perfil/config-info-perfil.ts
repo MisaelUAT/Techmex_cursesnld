@@ -121,10 +121,10 @@ export class ConfigInfoPerfil {
   async Guardar_Datos() {
     const response = await this.crud.Create_Coleccion(this.coleccion, this.form_inicio);
     if (response) {
-      this.mostrarToast('✅ Se publicó correctamente');
+      this.mostrarToast('Se publicó correctamente');
       this.ngOnInit();
     } else {
-      this.mostrarToast('❌ Error a la hora de guardar', 'danger');
+      this.mostrarToast('Error a la hora de guardar', 'danger');
     }
   }
 
@@ -150,7 +150,7 @@ export class ConfigInfoPerfil {
   async Actualizar_Datos() {
     const response = await this.crud.Update(this.coleccion, this.registro);
     if (response) {
-      this.mostrarToast('✅ ¡El registro se actualizó correctamente!');
+      this.mostrarToast('¡El registro se actualizó correctamente!');
       this.ngOnInit();
     } else {
       this.mostrarToast('❌ Hubo un error al actualizar', 'danger');
@@ -161,10 +161,10 @@ export class ConfigInfoPerfil {
     if (confirm('¿Deseas eliminar este usuario?')) {
       const response = await this.crud.Delete_Coleccion(this.coleccion, Registro);
       if (response) {
-        this.mostrarToast('✅ ¡El registro se eliminó correctamente!');
+        this.mostrarToast('¡El registro se eliminó correctamente!');
         this.ngOnInit();
       } else {
-        this.mostrarToast('❌ Hubo un error al eliminar', 'danger');
+        this.mostrarToast('Hubo un error al eliminar', 'danger');
       }
     }
   }
