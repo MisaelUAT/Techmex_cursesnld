@@ -1,4 +1,14 @@
 <!-- <router-outlet></router-outlet>
 <router-outlet name="content_configuser"></router-outlet> -->
-
-<app-config-info-perfil></app-config-info-perfil>
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+      <app-navbar-options></app-navbar-options>
+    </div>
+    <div class="col-lg-9">
+      <router-outlet></router-outlet>
+      <router-outlet name="content_configuser"></router-outlet>
+    </div>
+  </div>
+</div>

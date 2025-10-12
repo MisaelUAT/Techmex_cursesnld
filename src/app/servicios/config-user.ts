@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, collection, addDoc, doc, setDoc, deleteDoc, collectionData } from '@angular/fire/firestore';
 import { Observable, firstValueFrom } from 'rxjs';
-
+declare var boostrap: any;
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +10,6 @@ export class ConfigUser {
 
   constructor(private firestore: Firestore) { }
 
-  // 🔹 CREATE
   async Create_Coleccion(Coleccion: string, Form: any): Promise<string | false> {
     try {
       const colRef = collection(this.firestore, Coleccion);
@@ -22,7 +21,7 @@ export class ConfigUser {
     }
   }
 
-  // 🔹 READ
+ 
   async Read_Coleccion(Coleccion: string): Promise<any[]> {
     try {
       const colRef = collection(this.firestore, Coleccion);
@@ -35,7 +34,7 @@ export class ConfigUser {
     }
   }
 
-  // 🔹 UPDATE
+
   async Update(coleccion: string, registro: any): Promise<boolean> {
     try {
       const docRef = doc(this.firestore, `${coleccion}/${registro.id}`);
@@ -47,7 +46,7 @@ export class ConfigUser {
     }
   }
 
-  // 🔹 DELETE
+
   async Delete_Coleccion(Coleccion: string, Registro: any): Promise<boolean> {
     try {
       const docRef = doc(this.firestore, `${Coleccion}/${Registro.id}`);
