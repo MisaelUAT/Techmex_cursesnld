@@ -9,4 +9,8 @@ import { ServiceStyles } from '../servicios/service-styles';
 })
 export class Login {
   img_login!: HTMLImageElement;
+  form = {
+    correo: '',
+    contrasena:''
+  }
 }

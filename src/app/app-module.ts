@@ -10,6 +10,7 @@ import { Introduccion } from './inicio/introduccion/introduccion';
 import { Header } from './header/header';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { ConfigUser } from './servicios/config-user';
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // import { AngularFireModule } from '@angular/fire/compat';
@@ -69,6 +70,7 @@ const routes: Routes = [
     provideBrowserGlobalErrorListeners(),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
     ConfigUser,
   ],
   bootstrap: [App],
