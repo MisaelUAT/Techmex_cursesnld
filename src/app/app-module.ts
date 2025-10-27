@@ -52,7 +52,7 @@ const routes: Routes = [
     path: 'configUser',
     component: ConfigUsuario,
     children: [
-      { path: 'informacion_perfil', component: ConfigInfoPerfil, outlet: 'content_configuser' },
+      { path: 'informacion_perfil', component: ConfigInfoPerfil, outlet: 'content' },
     ],
   },
 ];
