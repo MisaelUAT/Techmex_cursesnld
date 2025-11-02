@@ -15,7 +15,7 @@ export class Login {
   form = {
     correo: '',
     contrasena: '',
-    terminos_condiciones: false,
+    terminos_condiciones: null,
   };
 
  
@@ -40,8 +40,8 @@ export class Login {
 
   async onLogin() {
       if (
-        !this.form.correo.trim() &&
-        !this.form.contrasena.trim() &&
+        !this.form.correo.trim() ||
+        !this.form.contrasena.trim() ||
         !this.form.terminos_condiciones
       ) {
         this.mostrarToast('Llena todos los campos que se te piden ❌ ', 'danger');

@@ -5,16 +5,18 @@
       <h5 class="text-light text-style mt-1 ms-2">TechMex Laredo</h5>
     </div>
     <div class="d-flex flex-row align-items-center justify-content-center">
-     <button type="button" class="fs-5 mt-1 bg-transparent border-0">
+     <!-- <button type="button" class="fs-5 mt-1 bg-transparent border-0">
             <i class="bi bi-person-circle text-light "></i>
-     </button>
-      <a class="text-light text-style mt-1 ms-2 text-decoration-none">Iniciar Sesion</a>
-      <i class="bi bi-gear  text-light fs-5 mt-1 ms-3"  [routerLink]="['/inicio', { outlets: { content: ['configuracion_usuario'] } }]">
-      
+     </button> -->
+     @if (!usuario_activo) {
+         <a class="text-light text-style mt-1 ms-2 text-decoration-none">Iniciar Sesion</a>
+        <i class="bi bi-gear  text-light fs-5 mt-1 ms-3"  [routerLink]="['/inicio', { outlets: { content: ['configuracion_usuario'] } }]"></i>
+     }
+     @if(usuario_activo){
       <button type="button" class="fs-5 mt-1 bg-transparent border-0" (click)='logout()'>
       <i class="bi bi-arrow-bar-right ms-1 text-white"></i>
       </button>
-      </i>
+     }
     </div>
   </header>
 </div>
