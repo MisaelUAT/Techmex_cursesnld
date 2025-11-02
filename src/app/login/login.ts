@@ -15,7 +15,7 @@ export class Login {
   form = {
     correo: '',
     contrasena: '',
-    terminos_condiciones: null,
+    terminos_condiciones: false,
   };
 
  
@@ -39,6 +39,9 @@ export class Login {
   }
 
   async onLogin() {
+    console.log(this.form.correo)
+    console.log(this.form.contrasena)
+    console.log(this.form.terminos_condiciones)
       if (
         !this.form.correo.trim() ||
         !this.form.contrasena.trim() ||
