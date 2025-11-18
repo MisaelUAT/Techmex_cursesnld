@@ -1,18 +1,31 @@
 <aside class="bg-aside h-100 d-flex flex-column gap-2">
-    <div class="d-flex flex-row justify-content-center ms-3 mt-3 bg-a">
-        <i class="bi bi-person"></i>
-        <button class="bg-transparent border-0 btn-infPerfil"  [routerLink]="['/configUser', { outlets: { content_configuser: ['informacion_perfil'] } }]">Informacion del Perfil</button>
-    </div>
-     <div class="d-flex flex-row justify-content-center ms-3">
-        <i class="bi bi-person-vcard"></i>
-        <button class="bg-transparent border-0 btn-infPerfil" type="button">Metodos de Pago</button>
-    </div>
-     <div class="d-flex flex-row justify-content-center ms-3">
-        <i class="bi bi-pencil"></i>
-        <button class="bg-transparent border-0 btn-infPerfil" type="button">Personalizacion</button>
-    </div>
-     <div class="d-flex flex-row justify-content-center ms-3">
-        <i class="bi bi-person-fill-gear"></i>
-        <button class="bg-transparent border-0 btn-infPerfil" type="button">Cuenta</button>
-    </div>
+  <div class="d-flex flex-row justify-content-center ms-3 mt-3 bg-a">
+    <i class="bi bi-person"></i>
+    <!-- <button
+      class="bg-transparent border-0 btn-infPerfil"
+    [routerLink]="['/inicio',{ outlets: { content: ['configuracion_usuario'], content_configuser: ['informacion_perfil'] } }]"
+    >
+      Informacion del Perfil
+    </button> -->
+
+    <button
+      class="bg-transparent border-0 btn-infPerfil"
+      [routerLink]="['/inicio', 'configuracion_usuario', 'informacion_perfil']"
+    >
+      Información del Perfil
+    </button>
+  </div>
+  <div class="d-flex flex-row justify-content-center ms-3">
+    <i class="bi bi-person-vcard"></i>
+    <button class="bg-transparent border-0 btn-infPerfil" type="button"       [routerLink]="['/inicio', 'configuracion_usuario', 'metodos_pago']"
+>Metodos de Pago</button>
+  </div>
+  <div class="d-flex flex-row justify-content-center ms-3">
+    <i class="bi bi-pencil"></i>
+    <button class="bg-transparent border-0 btn-infPerfil" type="button">Personalizacion</button>
+  </div>
+  <div class="d-flex flex-row justify-content-center ms-3">
+    <i class="bi bi-person-fill-gear"></i>
+    <button class="bg-transparent border-0 btn-infPerfil" type="button">Cuenta</button>
+  </div>
 </aside>

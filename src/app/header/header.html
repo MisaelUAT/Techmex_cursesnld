@@ -14,10 +14,10 @@
         >Iniciar Sesion</a>
      }
      @if(usuario_activo){
-      <button type="button" class="fs-5 mt-1 bg-transparent border-0" (click)='logout()'>
-      <i class="bi bi-gear  text-light fs-5 mt-1 ms-3"  [routerLink]="['/inicio', { outlets: { content: ['configuracion_usuario'] } }]"></i>
-      <i class="bi bi-arrow-bar-right ms-1 text-white"></i>
+      <i class="bi bi-gear  text-light fs-5 mt-1 ms-3"  [routerLink]="['/inicio', 'configuracion_usuario']"></i>
 
+      <button type="button" class="fs-5 mt-1 bg-transparent border-0" (click)='logout()'>
+      <i class="bi bi-arrow-bar-right ms-1 text-white"></i>
       </button>
      }
     </div>

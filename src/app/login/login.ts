@@ -14,9 +14,8 @@ export class Login {
   img_login!: HTMLImageElement;
   form = {
     correo: '',
-    contrasena: '',
-    terminos_condiciones: false,
-  };
+    contrasena: ''
+    };
 
  
 
@@ -41,11 +40,9 @@ export class Login {
   async onLogin() {
     console.log(this.form.correo)
     console.log(this.form.contrasena)
-    console.log(this.form.terminos_condiciones)
       if (
         !this.form.correo.trim() ||
-        !this.form.contrasena.trim() ||
-        !this.form.terminos_condiciones
+        !this.form.contrasena.trim() 
       ) {
         this.mostrarToast('Llena todos los campos que se te piden ❌ ', 'danger');
         return;

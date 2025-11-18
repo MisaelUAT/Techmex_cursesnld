@@ -22,6 +22,8 @@ import { ConfigInfoPerfil } from './inicio/config-usuario/config-info-perfil/con
 import { FormsModule } from '@angular/forms';
 import { CentroAyuda } from './inicio/centro-ayuda/centro-ayuda';
 import { PlanesSuscripcion } from './inicio/planes-suscripcion/planes-suscripcion';
+import { Membresia } from './inicio/config-usuario/membresia/membresia';
+import { MetodosPago } from './inicio/config-usuario/metodos-pago/metodos-pago';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBZhuH0PDvtAqzEiFZ6enoVLwsoAODl03k',
@@ -41,30 +43,46 @@ const routes: Routes = [
     path: 'inicio',
     component: Inicio,
     children: [
-      { path: 'introduccion', component: Introduccion, outlet: 'content' },
-      { path: 'configuracion_usuario', component: ConfigUsuario, outlet: 'content' },
-      { path: 'centro-ayuda', component: CentroAyuda, outlet: 'content' },
-      { path: 'planes-suscripcion', component: PlanesSuscripcion, outlet: 'content' },
-
-    ],
-  },
-  {
-    path: 'configUser',
-    component: ConfigUsuario,
-    children: [
-      { path: 'informacion_perfil', component: ConfigInfoPerfil, outlet: 'content' },
+      { path: 'introduccion', component: Introduccion },
+      { path: 'centro-ayuda', component: CentroAyuda },
+      { path: 'planes-suscripcion', component: PlanesSuscripcion },
+      {
+        path: 'configuracion_usuario',
+        component: ConfigUsuario,
+        children: [
+          {
+            path: 'informacion_perfil',
+            component: ConfigInfoPerfil,
+          },
+           {
+            path: 'metodos_pago',
+            component: MetodosPago,
+          },
+        ],
+      },
     ],
   },
 ];
 
 @NgModule({
-  declarations: [App, Login, Registro, Inicio, Introduccion, Header, Navbar, Footer, ConfigUsuario, NavbarOptions, ConfigInfoPerfil, CentroAyuda, PlanesSuscripcion],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes),
-    FormsModule
+  declarations: [
+    App,
+    Login,
+    Registro,
+    Inicio,
+    Introduccion,
+    Header,
+    Navbar,
+    Footer,
+    ConfigUsuario,
+    NavbarOptions,
+    ConfigInfoPerfil,
+    CentroAyuda,
+    PlanesSuscripcion,
+    Membresia,
+    MetodosPago,
   ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), FormsModule],
   exports: [RouterModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
