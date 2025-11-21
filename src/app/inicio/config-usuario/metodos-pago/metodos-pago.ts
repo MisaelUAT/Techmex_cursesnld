@@ -48,7 +48,7 @@ export class MetodosPago {
   async Guardar_Tarjeta() {
     const response = await this.Crud.Create_Coleccion(this.coleccion, this.form_metodoPago);
     if (response) {
-      this.mostrarToast('Se publicó correctamente');
+      this.mostrarToast('Se publicó correctamente','success');
       location.reload()
       this.ngOnInit();
     } else {
@@ -78,7 +78,7 @@ export class MetodosPago {
   async Actualizar_Tarjeta() {
     const response = await this.Crud.Update(this.coleccion, this.registro);
     if (response) {
-      this.mostrarToast('¡El registro se actualizó correctamente!');
+      this.mostrarToast('¡El registro se actualizó correctamente!','success');
       this.ngOnInit();
     } else {
       this.mostrarToast('❌ Hubo un error al actualizar', 'danger');
@@ -89,7 +89,7 @@ export class MetodosPago {
     if (confirmation) {
       const response = await this.Crud.Delete_Coleccion(this.coleccion, Registro);
       if (response) {
-        this.mostrarToast('¡El registro se eliminó correctamente!');
+        this.mostrarToast('¡El registro se eliminó correctamente!','success');
         this.ngOnInit();
       } else {
         this.mostrarToast('Hubo un error al eliminar', 'danger');
