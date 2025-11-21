@@ -49,6 +49,7 @@ export class MetodosPago {
     const response = await this.Crud.Create_Coleccion(this.coleccion, this.form_metodoPago);
     if (response) {
       this.mostrarToast('Se publicó correctamente');
+      location.reload()
       this.ngOnInit();
     } else {
       this.mostrarToast('Error a la hora de guardar', 'danger');
@@ -95,5 +96,63 @@ export class MetodosPago {
       }
     }
   }
+
+    Validaciones_numeroTarjeta(valor_input: Event) {
+    const inputElement = valor_input.target as HTMLInputElement;
+    let valor = inputElement.value;
+
+    let valorLimpio = valor.replace(/[^0-9]/g, '');
+
+    valorLimpio = valorLimpio.slice(0, 16);
+
+    let valorFormateado = '';
+
+    for (let i = 0; i < valorLimpio.length; i++) {
+      valorFormateado += valorLimpio[i];
+
+      if ((i + 1) % 4 === 0 && i + 1 < valorLimpio.length) {
+        valorFormateado += '-';
+      }
+    }
+    inputElement.value = valorFormateado;
+  }
+
+  Validaciones_Numeros(event: KeyboardEvent) {
+    const isDigit = /[0-9]/.test(event.key);
+
+    const isControlKey =
+      event.key === 'Backspace' ||
+      event.key === 'Delete';
+
+    if (isDigit || isControlKey) {
+      return true;
+    }
+    return false;
+  }
+
+  Validaciones_vencimieinto(event:Event){
+    const inputElement = event.target as HTMLInputElement;
+    let valor = inputElement.value;
+
+    let valorLimpio = valor.replace(/[^0-9]/g, '');
+
+    valorLimpio = valorLimpio.slice(0, 4);
+
+    let valorFormateado = '';
+    
+    if (valorLimpio.length >= 2) {
+        valorFormateado = valorLimpio.slice(0, 2);
+        
+        valorFormateado += '/';
+        
+        valorFormateado += valorLimpio.slice(2);
+    } else {
+        valorFormateado = valorLimpio;
+    }
+
+    inputElement.value = valorFormateado
+
+  }
+
 
 }

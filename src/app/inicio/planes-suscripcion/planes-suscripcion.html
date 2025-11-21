@@ -340,9 +340,10 @@
                   </label>
                   <input
                     type="text"
-                    id="numero_tarjeta"
+                    id="input_numero_tarjeta"
                     name="numero_tarjeta"
                     [(ngModel)]="form_compraSuscripcion.numero_tarjeta"
+                    (input)="Validaciones_numeroTarjeta($event)"
                     class="form-control w-75"
                     required
                   />
@@ -354,9 +355,9 @@
                   </label>
                   <input
                     type="text"
-                    id="nombre_banco"
-                    name="nombre_banco"
-                    [(ngModel)]="form_compraSuscripcion.tarjeta_banco"
+                    id="input_nombre_banco"
+                    name="banco"
+                    [(ngModel)]="form_compraSuscripcion.banco"
                     class="form-control w-75"
                     required
                   />
@@ -367,7 +368,7 @@
                     Tipo de Tarjeta
                   </label>
                   <select
-                    id="tipo_tarjeta"
+                    id="input_tipo_tarjeta"
                     name="tipo_tarjeta"
                     class="form-select w-50"
                     [(ngModel)]="form_compraSuscripcion.tipo_tarjeta"
@@ -380,13 +381,15 @@
 
                 <div class="d-flex flex-column align-items-center mt-2 mb-3">
                   <label for="pin" class="form-label text-secondary fw-bold">
-                    PIN
+                    CCV
                   </label>
                   <input
                     type="text"
-                    id="pin"
-                    name="pin"
-                    [(ngModel)]="form_compraSuscripcion.pin"
+                    id="input_ccv"
+                    maxlength="3"
+                    name="ccv"
+                    (keydown)="Validaciones_Numeros($event)"
+                    [(ngModel)]="form_compraSuscripcion.ccv"
                     class="form-control w-25"
                     required
                   />
@@ -398,9 +401,11 @@
                   </label>
                   <input
                     type="text"
-                    id="vencimiento_input"
-                    name="vencimiento_input"
-                    [(ngModel)]="form_compraSuscripcion.Vencimiento"
+                    id=" input_vencimiento"
+                    name="vencimiento"
+                    maxlength="5"
+                    (input)="Validaciones_vencimieinto($event)"
+                    [(ngModel)]="form_compraSuscripcion.vencimiento"
                     class="form-control w-25"
                     required
                   />
